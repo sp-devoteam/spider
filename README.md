@@ -15,4 +15,4 @@ MariaDB [(none)]> quit;
 
 You will then need to edit database.php to add your mysql user credentials.
 
-
+test
