@@ -20,9 +20,9 @@ connectDB();
 
 	$email = $_POST['email'];
 	$password = $_POST['password'];
-	$result = mysql_query("SELECT * FROM users WHERE email = '" . $email. "' and password = '" . md5($password) . "'");
+	$result = mysqli_query($db, "SELECT * FROM users WHERE email = '" . $email. "' and password = '" . md5($password) . "'");
 
-	if ($row = mysql_fetch_array($result)) {
+	if ($row = mysqli_fetch_array($db, $result)) {
 		$_SESSION['usr_id'] = $row['id'];
 		$_SESSION['usr_name'] = $row['name'];
 		header("Location: assess.php");
