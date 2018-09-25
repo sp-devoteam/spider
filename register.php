@@ -23,10 +23,10 @@ $error = false;
 
 //check if form is submitted
 if (isset($_POST['signup'])) {
-	$name = mysql_real_escape_string($_POST['name']);
-	$email = mysql_real_escape_string($_POST['email']);
-	$password = mysql_real_escape_string($_POST['password']);
-	$cpassword = mysql_real_escape_string($_POST['cpassword']);
+	$name = mysqli_real_escape_string($_POST['name']);
+	$email = mysqli_real_escape_string($_POST['email']);
+	$password = mysqli_real_escape_string($_POST['password']);
+	$cpassword = mysqli_real_escape_string($_POST['cpassword']);
 	
 	//name can contain only alpha characters and space
 	if (!preg_match("/^[a-zA-Z ]+$/",$name)) {
