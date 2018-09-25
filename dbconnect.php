@@ -12,7 +12,7 @@ $db = mysqli_connect($db_host,$db_user,$db_pass);
 	die("Unable to connect to database");
 	}
 ##if (!mysqli_select_db('spider')) {
-if (!mysqli_select_db($db_name)) {
+if (!mysqli_select_db($db, $db_name)) {
 		die("Unable to access database $db_name");
 	}
 }
