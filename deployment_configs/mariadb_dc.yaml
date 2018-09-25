@@ -23,6 +23,18 @@ spec:
     recreateParams:
       timeoutSeconds: 600
     resources: {}
+    recreateParams:
+      post:
+        execNewPod:
+          command:
+          - /bin/sh
+          - -c
+          - hostname && sleep 10 && /opt/rh/rh-mysql56/root/usr/bin/mysql -h $MYSQL_SERVICE_HOST
+            -u $MYSQL_USER -D $MYSQL_DATABASE -p$MYSQL_PASSWORD -P 3306 -e 'CREATE
+            TABLE IF NOT EXISTS emails (from_add varchar(40), to_add varchar(40),
+            subject varchar(40), body varchar(200), created_at date);' && sleep 60
+          containerName: mysql
+        failurePolicy: ignore
     type: Recreate
   template:
     metadata:
