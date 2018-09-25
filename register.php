@@ -50,7 +50,7 @@ if (isset($_POST['signup'])) {
 		print $qq . "<br>";
 #print $aa . "<br>";
 #		if(mysql_query($db, $qq) {
-		if(mysql_query($db, "INSERT INTO users(name,email,password) VALUES('" . $name . "', '" . $email . "', '" . md5($password) . "')")) {
+		if(mysqli_query($db, "INSERT INTO users(name,email,password) VALUES('" . $name . "', '" . $email . "', '" . md5($password) . "')")) {
 			$successmsg = "Successfully Registered! <a href='login.php'>Click here to Login</a>";
 		} else {
 			print $qq . "<br>";
