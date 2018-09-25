@@ -49,8 +49,8 @@ if (isset($_POST['signup'])) {
 		$qq = "INSERT INTO users(name,email,password,uuid) VALUES('" . $name . "', '" . $email . "', '" . md5($password) . "',uuid())	";
 		print $qq . "<br>";
 #print $aa . "<br>";
-#		if(mysql_query($qq) {
-		if(mysql_query("INSERT INTO users(name,email,password) VALUES('" . $name . "', '" . $email . "', '" . md5($password) . "')")) {
+#		if(mysql_query($db, $qq) {
+		if(mysql_query($db, "INSERT INTO users(name,email,password) VALUES('" . $name . "', '" . $email . "', '" . md5($password) . "')")) {
 			$successmsg = "Successfully Registered! <a href='login.php'>Click here to Login</a>";
 		} else {
 			print $qq . "<br>";
