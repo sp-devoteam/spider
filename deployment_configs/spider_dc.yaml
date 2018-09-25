@@ -1,0 +1,113 @@
+apiVersion: apps.openshift.io/v1
+kind: DeploymentConfig
+metadata:
+  annotations:
+    openshift.io/generated-by: OpenShiftNewApp
+  creationTimestamp: '2018-09-17T14:18:31Z'
+  generation: 30
+  labels:
+    app: spider
+  name: spider
+  namespace: readytoinnovate
+  resourceVersion: '97369'
+  selfLink: >-
+    /apis/apps.openshift.io/v1/namespaces/readytoinnovate/deploymentconfigs/spider
+  uid: 8dcd1e28-ba84-11e8-9490-08002771db1a
+spec:
+  replicas: 1
+  revisionHistoryLimit: 10
+  selector:
+    app: spider
+    deploymentconfig: spider
+  strategy:
+    activeDeadlineSeconds: 21600
+    resources: {}
+    rollingParams:
+      intervalSeconds: 1
+      maxSurge: 25%
+      maxUnavailable: 25%
+      timeoutSeconds: 600
+      updatePeriodSeconds: 1
+    type: Rolling
+  template:
+    metadata:
+      annotations:
+        openshift.io/generated-by: OpenShiftNewApp
+      creationTimestamp: null
+      labels:
+        app: spider
+        deploymentconfig: spider
+    spec:
+      containers:
+        - env:
+            - name: OPENSHIFT_MYSQL_DB_USERNAME
+              valueFrom:
+                secretKeyRef:
+                  key: database_user
+                  name: mariadb
+            - name: OPENSHIFT_MYSQL_DB_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  key: database_password
+                  name: mariadb
+            - name: OPENSHIFT_MYSQL_DB_HOST
+              value: mariadb.readytoinnovate.svc
+            - name: OPENSHIFT_MYSQL_DB_NAME
+              value: mariadb
+          envFrom:
+            - secretRef:
+                name: mariadb
+          image: >-
+            172.30.1.1:5000/readytoinnovate/spider@sha256:a47182506510e1d0062c23bc7b8b419249ad01aa5697ddab1561295bc7e99530
+          imagePullPolicy: Always
+          name: spider
+          ports:
+            - containerPort: 8080
+              protocol: TCP
+            - containerPort: 8443
+              protocol: TCP
+          resources: {}
+          terminationMessagePath: /dev/termination-log
+          terminationMessagePolicy: File
+      dnsPolicy: ClusterFirst
+      restartPolicy: Always
+      schedulerName: default-scheduler
+      securityContext: {}
+      terminationGracePeriodSeconds: 30
+  test: false
+  triggers:
+    - type: ConfigChange
+    - imageChangeParams:
+        containerNames:
+          - spider
+        from:
+          kind: ImageStreamTag
+          name: 'spider:latest'
+          namespace: readytoinnovate
+        lastTriggeredImage: >-
+          172.30.1.1:5000/readytoinnovate/spider@sha256:a47182506510e1d0062c23bc7b8b419249ad01aa5697ddab1561295bc7e99530
+      type: ImageChange
+status:
+  availableReplicas: 1
+  conditions:
+    - lastTransitionTime: '2018-09-25T08:27:09Z'
+      lastUpdateTime: '2018-09-25T08:27:09Z'
+      message: Deployment config has minimum availability.
+      status: 'True'
+      type: Available
+    - lastTransitionTime: '2018-09-25T13:10:39Z'
+      lastUpdateTime: '2018-09-25T13:10:42Z'
+      message: replication controller "spider-29" successfully rolled out
+      reason: NewReplicationControllerAvailable
+      status: 'True'
+      type: Progressing
+  details:
+    causes:
+      - type: Manual
+    message: manual change
+  latestVersion: 29
+  observedGeneration: 30
+  readyReplicas: 1
+  replicas: 1
+  unavailableReplicas: 0
+  updatedReplicas: 1
