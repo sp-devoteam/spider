@@ -1,0 +1,334 @@
+kind: Template
+apiVersion: v1
+metadata:
+  name: readytoinnovate 
+  annotations:
+    openshift.io/display-name: "Readytoinnovate" 
+    description: >-
+      A DevOps assessment application.
+       
+    openshift.io/long-description: >-
+      A DevOps assessment application.
+      
+    tags: "readytoinnovate,php" 
+    iconClass: icon-php 
+    openshift.io/provider-display-name: "Devoteam." 
+    openshift.io/documentation-url: "https://github.com/pstiebel/spider"     
+
+# label definition
+labels:
+  template: readytoinnovate
+
+# parameter definition
+parameters:
+  - name: NAME
+    description: "The general name of objects used in this application"
+    required: true
+    value: readytoinnovate
+
+  - name: APP_NAME
+    description: "The name of the application"
+    value: spiderapp
+    
+  - name: DB_NAME
+    description: "The name of the database"
+    value: mariadb
+    
+  - name: DB_USER
+    description: "The name of the database user"
+    value: spiderdb_user
+    
+  - name: DB_PASSWORD
+    description: "The password of the database user"
+    generate: expression
+    from: "[a-zA-Z0-9]{12}"
+    
+  - name: DB_ROOT_PASSWORD
+    description: "The root password of the database user"
+    generate: expression
+    from: "[a-zA-Z0-9]{12}"
+    
+  - name: SOURCE_REPOSITORY_URL
+    description: "The URL of the repository with your application source code."
+    displayName: "Git Repository URL"
+    value: https://github.com/pstiebel/spider.git
+
+# object list    
+objects:
+
+# secret definition
+  - apiVersion: v1
+    kind: Secret
+    metadata:
+      name: "${NAME}"
+    stringData:
+      database_user: "${DB_USER}"
+      database_password: "${DB_PASSWORD}"
+      database_root_password: "${DB_ROOT_PASSWORD}"
+      database_name: "${DB_NAME}"
+
+# service definition for database service    
+  - apiVersion: v1
+    kind: Service
+    metadata:
+      annotations:
+        template.openshift.io/expose-uri: mysql://{.spec.clusterIP}:{.spec.ports[?(.name=="${DB_NAME}")].port}
+      name: "${DB_NAME}"      
+    spec:
+      ports:
+      - name: "${DB_NAME}"
+        port: 3306
+        protocol: TCP
+        targetPort: 3306
+      selector:
+        name: "${DB_NAME}"
+
+# service definition for application service    
+  - apiVersion: v1
+    kind: Service
+    metadata:
+      annotations:
+        description: "Exposes the application."
+      name: "${APP_NAME}"
+    spec:
+      ports:
+      - name: 8080-tcp
+        port: 8080
+        protocol: TCP
+        targetPort: 8080
+      - name: 8443-tcp
+        port: 8443
+        protocol: TCP
+        targetPort: 8443
+      selector:
+        app: "${APP_NAME}"
+        deploymentconfig: "${APP_NAME}"
+
+# deployment config for database container
+  - apiVersion: apps.openshift.io/v1
+    kind: DeploymentConfig
+    metadata:
+      annotations:
+        template.alpha.openshift.io/wait-for-ready: "true"
+      name: "${DB_NAME}"
+    spec:
+      replicas: 1
+      selector:
+        name: "${DB_NAME}"
+      strategy:
+        activeDeadlineSeconds: 21600
+        recreateParams:
+          timeoutSeconds: 600
+        resources: {}
+        type: Recreate
+      template:
+        metadata:
+          labels:
+            name: "${DB_NAME}"
+        spec:
+          containers:
+          - env:
+            - name: MYSQL_USER
+              valueFrom:
+                secretKeyRef:
+                  key: database_user
+                  name: "${NAME}"
+            - name: MYSQL_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  key: database_password
+                  name: "${NAME}"
+            - name: MYSQL_ROOT_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  key: database_root_password
+                  name: "${NAME}"
+            - name: MYSQL_DATABASE
+              valueFrom:
+                secretKeyRef:
+                  key: database_name
+                  name: "${NAME}"
+            envFrom:
+            - secretRef:
+                name: "${NAME}"
+            image: " "
+            imagePullPolicy: IfNotPresent
+            livenessProbe:
+              failureThreshold: 3
+              initialDelaySeconds: 30
+              periodSeconds: 10
+              successThreshold: 1
+              tcpSocket:
+                port: 3306
+              timeoutSeconds: 1
+            name: "${DB_NAME}"
+            ports:
+            - containerPort: 3306
+              protocol: TCP
+            readinessProbe:
+              exec:
+                command:
+                - /bin/sh
+                - -i
+                - -c
+                - MYSQL_PWD="$MYSQL_PASSWORD" mysql -h 127.0.0.1 -u $MYSQL_USER -D $MYSQL_DATABASE
+                  -e 'SELECT 1'
+              failureThreshold: 3
+              initialDelaySeconds: 5
+              periodSeconds: 10
+              successThreshold: 1
+              timeoutSeconds: 1
+            resources:
+              limits:
+                memory: 512Mi
+            terminationMessagePath: /dev/termination-log
+            terminationMessagePolicy: File
+#           volumeMounts:
+#           - mountPath: /var/lib/mysql/data
+#             name: data
+          dnsPolicy: ClusterFirst
+          restartPolicy: Always
+          schedulerName: default-scheduler
+          securityContext: {}
+          terminationGracePeriodSeconds: 30
+          volumes:
+          - name: "${DB_NAME}"
+            persistentVolumeClaim:
+              claimName: "${DB_NAME}"
+      test: false
+      triggers:
+      - imageChangeParams:
+          automatic: true
+          containerNames:
+          - "${DB_NAME}"
+          from:
+            kind: ImageStreamTag
+            name: "${DB_NAME}:10.2"
+        type: ImageChange
+      - type: ConfigChange
+
+# deployment config for application container
+  - apiVersion: apps.openshift.io/v1
+    kind: DeploymentConfig
+    metadata:
+      name: "${APP_NAME}"
+    spec:
+      replicas: 1
+      selector:
+        app: "${APP_NAME}"
+        deploymentconfig: "${APP_NAME}"
+      strategy:
+        activeDeadlineSeconds: 21600
+        resources: {}
+        rollingParams:
+          intervalSeconds: 1
+          maxSurge: 25%
+          maxUnavailable: 25%
+          timeoutSeconds: 600
+          updatePeriodSeconds: 1
+        type: Rolling
+      template:
+        metadata:
+          labels:
+            app: "${APP_NAME}"
+            deploymentconfig: "${APP_NAME}"
+        spec:
+          containers:
+          - env:
+            - name: OPENSHIFT_MYSQL_DB_USERNAME
+              valueFrom:
+                secretKeyRef:
+                  key: database_user
+                  name: "${NAME}"
+            - name: OPENSHIFT_MYSQL_DB_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  key: database_password
+                  name: "${NAME}"
+            - name: OPENSHIFT_MYSQL_DB_HOST
+              value: "${DB_NAME}.${NAME}.svc"
+            - name: OPENSHIFT_MYSQL_DB_NAME
+              value: "${DB_NAME}"
+            envFrom:
+            - secretRef:
+                name: "${NAME}"
+            imagePullPolicy: Always
+            name: "${APP_NAME}"
+            ports:
+            - containerPort: 8080
+              protocol: TCP
+            - containerPort: 8443
+              protocol: TCP
+            resources: {}
+            terminationMessagePath: /dev/termination-log
+            terminationMessagePolicy: File
+          dnsPolicy: ClusterFirst
+          restartPolicy: Always
+          schedulerName: default-scheduler
+          securityContext: {}
+          terminationGracePeriodSeconds: 30
+      test: false
+      triggers:
+      - type: ConfigChange
+      - imageChangeParams:
+          automatic: true
+          containerNames:
+          - "${APP_NAME}"
+          from:
+            kind: ImageStreamTag
+            name: "${APP_NAME}:latest"
+        type: ImageChange
+
+# build config for application container
+  - apiVersion: build.openshift.io/v1
+    kind: BuildConfig
+    metadata:
+      annotations:
+        description: "Defines how to build the application."
+      name: "${APP_NAME}"
+    spec:
+      failedBuildsHistoryLimit: 5
+      nodeSelector: null
+      output:
+        to:
+          kind: ImageStreamTag
+          name: "${APP_NAME}:latest"
+      runPolicy: Serial
+      source:
+        git:
+          uri: "${SOURCE_REPOSITORY_URL}"
+        type: Git
+      strategy:
+        sourceStrategy:
+          from:
+            kind: ImageStreamTag  
+            name: php:latest        # php-version might be set using a template paramter here as well 
+            namespace: openshift    # namespace for imagestream might be set using a template paramter here as well
+        type: Source
+      successfulBuildsHistoryLimit: 5
+      triggers: # git web hook might be added here as well
+      - type: ConfigChange
+      - type: ImageChange
+
+# imagestream definition for application 
+  - apiVersion: image.openshift.io/v1
+    kind: ImageStream
+    metadata:
+      name: "${APP_NAME}"
+    
+    
+# route definition for exposed application service        
+  - apiVersion: route.openshift.io/v1
+    kind: Route
+    metadata:
+      annotations:
+        openshift.io/host.generated: "true"
+      name: "${APP_NAME}"
+    spec:
+      host: 
+      port:
+        targetPort: 8080-tcp
+      to:
+        kind: Service
+        name: "${APP_NAME}"
+
