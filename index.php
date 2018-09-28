@@ -121,6 +121,7 @@ h3 { color: #7c795d; font-family: 'Source Sans Pro', sans-serif; font-size: 28px
 				<li><a href="https://ready-to-innovate.com/blog/using-rti/using-ready-to-innovate-rti/">Blog</a></li>
 				<?php } else { ?>
 				<li><a href="login.php">Login</a></li>
+				<li><a href="register.php">Sign Up</a></li>
 				<li><a href="https://ready-to-innovate.com/blog/using-rti/using-ready-to-innovate-rti/">Blog</a></li>
 
 				<?php } ?>
