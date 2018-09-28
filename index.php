@@ -130,6 +130,14 @@ h3 { color: #7c795d; font-family: 'Source Sans Pro', sans-serif; font-size: 28px
 	</div>
 </nav>
 
+<div align="center">
+
+	<br><br><br>
+	<a href="https://www.devoteam.com/"><img src="images/devoteam_logo.png" alt="Devoteam Logo"></a>
+
+</div>
+
+
 <?php
 if(isset($_SESSION['usr_id'])) {
 include 'dbconnect.php';
