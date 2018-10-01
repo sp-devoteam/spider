@@ -93,6 +93,8 @@ input {
 h3 { color: #7c795d; font-family: 'Source Sans Pro', sans-serif; font-size: 28px; font-weight: 400; line-height: 32px; margin: 0 0 24px; }
 
 
+      .center  { text-align: center; }
+	  
 
     </style>		
     
@@ -134,8 +136,12 @@ h3 { color: #7c795d; font-family: 'Source Sans Pro', sans-serif; font-size: 28px
 	<br><br><br>
 	<table border = "0px">
 	<tr>
-		<td width= "1920px" align= "center">
-			<a href="https://www.devoteam.com/"><img src="images/devoteam_logo.png" alt="Devoteam Logo"></a>
+		<td>
+			<a href="https://www.devoteam.com/">
+				<p class = "center">
+					<img src="images/devoteam_logo.png" alt="Devoteam Logo">
+				</p>
+			</a>
 		</td>
 	</tr>
 	</table>
