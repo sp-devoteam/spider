@@ -132,7 +132,13 @@ h3 { color: #7c795d; font-family: 'Source Sans Pro', sans-serif; font-size: 28px
 </nav>
 
 	<br><br><br>
-	<a href="https://www.devoteam.com/"><img src="images/devoteam_logo.png" alt="Devoteam Logo"></a>
+	<table border = "0px">
+	<tr>
+		<td width= "1920px" align= "center">
+			<a href="https://www.devoteam.com/"><img src="images/devoteam_logo.png" alt="Devoteam Logo"></a>
+		</td>
+	</tr>
+	</table>
 
 <?php
 if(isset($_SESSION['usr_id'])) {
