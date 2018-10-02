@@ -155,7 +155,7 @@ if (isset($_POST['signup'])) {
 <script src="js/bootstrap.min.js"></script>
 	
 <div id="logo">
-<a href="https://www.devoteam.com/"><img src="devoteam_logo.png" alt="Devoteam Logo"></a>
+<a href="https://www.devoteam.com/"><img src="images/devoteam_logo.png" alt="Devoteam Logo"></a>
 </div>
 
 </body>
