@@ -334,13 +334,13 @@ To complete the assessment, please use the tabs and check the comment which bett
 ?>
  
 	<br><br><br>
-	<table border = "3px" width = "99%">
+	<table border = "3px" width = "99%" height="1000px">
 		<tr><td>
-		<p class="center">
-			<a href="https://www.devoteam.com/">
-				<img src="images/devoteam_logo.png" alt="Devoteam Logo">
-			</a>
-		</p>
+			<p class="center">
+				<a href="https://www.devoteam.com/">
+					<img src="images/devoteam_logo.png" alt="Devoteam Logo">
+				</a>
+			</p>
 		</td></tr>
 	</table>
 </body>
