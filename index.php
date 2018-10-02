@@ -93,7 +93,7 @@ input {
 h3 { color: #7c795d; font-family: 'Source Sans Pro', sans-serif; font-size: 28px; font-weight: 400; line-height: 32px; margin: 0 0 24px; }
 
 
-      .center  { text-align: right; text-valign: bottom; }
+      .center  { text-align: right; vertical-align:bottom; }
 	  
 
     </style>		
