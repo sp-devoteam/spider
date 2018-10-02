@@ -86,6 +86,7 @@ if (isset($_POST['signup'])) {
 			<ul class="nav navbar-nav navbar-right">
 				<li><a href="login.php">Login</a></li>
 				<li class="active"><a href="register.php">Sign Up</a></li>
+				<li><a href="https://ready-to-innovate.com/blog/using-rti/using-ready-to-innovate-rti/">Blog</a></li>
 			</ul>
 		</div>
 	</div>
