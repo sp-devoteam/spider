@@ -214,11 +214,11 @@ $userId = $_SESSION['usr_id'];
   <div id="tabs-2">
     
 <label class="w3-label w3-validate">Client Name</label>
-<input class="w3-input" name="customerName" type="text" required>
+<input class="w3-input" name="customerName" placeholder="Your Client Name" type="text" required>
 
     <br>
 <label class="w3-label w3-validate" >Red Hat Email Address</label>    
-<input onfocusout="validateForm()" class="w3-input" name="rhEmail"  type="text" required>
+<input onfocusout="validateForm()" class="w3-input" name="rhEmail" placeholder="Your Email-Address" type="text" required>
     <br>
 
   <fieldset>
