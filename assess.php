@@ -125,6 +125,15 @@ input[type=submit] {
     -webkit-border-radius: 5px;
     border-radius: 5px; 
 }
+	  
+#logo {
+  background-color: white;
+  position: absolute;
+  width: 193px;
+  height: 65px;
+  bottom: 20px;
+  right: 20px;
+}
 
     </style>		
     
@@ -371,8 +380,10 @@ $userId = $_SESSION['usr_id'];
 <?php    }
 ####  End of Logged on bit ######
 ?>
- 
 
+<div id="logo">
+<a href="https://www.devoteam.com/"><img src="devoteam_logo.png" alt="Devoteam Logo"></a>
+</div>
 
 </body>
 </html>
