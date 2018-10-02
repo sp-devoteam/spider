@@ -42,7 +42,16 @@ connectDB();
 <body>
 
 <style>
-      .center  { text-align: right; vertical-align: bottom; }
+
+#logo {
+  background-color: white;
+  position: absolute;
+  width: 193px;
+  height: 65px;
+  bottom: 20px;
+  right: 20px;
+}
+	
 </style>	
 
 <nav class="navbar navbar-default" role="navigation">
@@ -102,16 +111,9 @@ connectDB();
 <script src="js/jquery-1.10.2.js"></script>
 <script src="js/bootstrap.min.js"></script>
 	
-	<br><br><br>
-	<table border = "0px" width = "99%" height="500px">
-		<tr><td valign=bottom>
-			<p class="center">
-				<a href="https://www.devoteam.com/">
-					<img src="images/devoteam_logo.png" alt="Devoteam Logo">
-				</a>
-			</p>
-		</td></tr>
-</table>
+<div id="logo">
+<a href="https://www.devoteam.com/"><img src="devoteam_logo.png" alt="Devoteam Logo"></a>
+</div>
 	
 </body>
 </html>
