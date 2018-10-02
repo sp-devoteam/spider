@@ -93,7 +93,7 @@ input {
 h3 { color: #7c795d; font-family: 'Source Sans Pro', sans-serif; font-size: 28px; font-weight: 400; line-height: 32px; margin: 0 0 24px; }
 
 
-      .center  { text-align: right; vertical-align:bottom; }
+      .center  { text-align: right; vertical-align: bottom; }
 	  
 
     </style>		
@@ -334,7 +334,7 @@ To complete the assessment, please use the tabs and check the comment which bett
 ?>
  
 	<br><br><br>
-	<table border = "3px" width = "99%" height="1000px">
+	<table border = "0px" width = "100%" height="100%">
 		<tr><td>
 			<p class="center">
 				<a href="https://www.devoteam.com/">
