@@ -93,7 +93,7 @@ input {
 h3 { color: #7c795d; font-family: 'Source Sans Pro', sans-serif; font-size: 28px; font-weight: 400; line-height: 32px; margin: 0 0 24px; }
 
 
-      .center  { text-align: center; color: orange; font-size:25px}
+      .center  { text-align: center; }
 	  
 
     </style>		
@@ -334,10 +334,12 @@ To complete the assessment, please use the tabs and check the comment which bett
 ?>
  
 	<br><br><br>
-	<a href="https://www.devoteam.com/">
-		<img src="images/devoteam_logo.png" alt="Devoteam Logo">
-	</a>
-
+	
+	<p class="center">
+		<a href="https://www.devoteam.com/">
+			<img src="images/devoteam_logo.png" alt="Devoteam Logo">
+		</a>
+	</p>
 </body>
 </html>
 
