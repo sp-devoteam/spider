@@ -334,6 +334,7 @@ To complete the assessment, please use the tabs and check the comment which bett
 ?>
  
 	<br><br>
+	<a>Einfach nur Text!</a>
 	<table border = "0px">
 	<tr>
 		<td>
