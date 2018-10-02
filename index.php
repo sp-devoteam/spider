@@ -6,15 +6,15 @@ session_start();
 <head>
 	<title>Ready to Innovate?</title>
 	<meta content="width=device-width, initial-scale=1.0" name="viewport" >
-<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css" />
 	<link rel="stylesheet" type="text/css" href="css/datatables.min.css"/>
-<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+	<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
 
 <!--	<script src="js/jquery-1.10.2.js"></script>-->
-  <link rel="stylesheet" href="/resources/demos/style.css">
-  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  	<link rel="stylesheet" href="/resources/demos/style.css">
+  	<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   
   <script>
   $( function() {
@@ -132,19 +132,6 @@ h3 { color: #7c795d; font-family: 'Source Sans Pro', sans-serif; font-size: 28px
 		</div>
 	</div>
 </nav>
-
-	<br><br><br>
-	<table border = "0px">
-	<tr>
-		<td>
-			<a href="https://www.devoteam.com/">
-				<p class = "center">
-					<img src="images/devoteam_logo.png" alt="Devoteam Logo">
-				</p>
-			</a>
-		</td>
-	</tr>
-	</table>
 
 <?php
 if(isset($_SESSION['usr_id'])) {
@@ -346,6 +333,18 @@ To complete the assessment, please use the tabs and check the comment which bett
 ####  End of Logged on bit ######
 ?>
  
+	<br><br><br>
+	<table border = "0px">
+	<tr>
+		<td>
+			<a href="https://www.devoteam.com/">
+				<p class = "center">
+					<img src="images/devoteam_logo.png" alt="Devoteam Logo">
+				</p>
+			</a>
+		</td>
+	</tr>
+	</table>
 
 
 </body>
