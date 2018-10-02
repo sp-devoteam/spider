@@ -334,19 +334,11 @@ To complete the assessment, please use the tabs and check the comment which bett
 ?>
  
 	<br><br>
-	<y class="center" href="https://www.devoteam.com/">Einfach nur Text!</y>
-	<table border = "0px">
-	<tr>
-		<td>
-			<p class = "center">
-			<a href="https://www.devoteam.com/">
-				<img src="images/devoteam_logo.png" alt="Devoteam Logo">
-			</a>
-			</p>
-		</td>
-	</tr>
-	</table>
-
+	<y class="center"><a href="https://www.devoteam.com/">Einfach nur Text!</a></y>
+	<br>
+	<a href="https://www.devoteam.com/">
+		<img src="images/devoteam_logo.png" alt="Devoteam Logo">
+	</a>
 
 </body>
 </html>
