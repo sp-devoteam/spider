@@ -333,9 +333,7 @@ To complete the assessment, please use the tabs and check the comment which bett
 ####  End of Logged on bit ######
 ?>
  
-	<br><br>
-	<a href="https://www.devoteam.com/"><img src="images/devoteam_logo.png" alt="Devoteam Logo"></a>
-	<br>
+	<br><br><br>
 	<a href="https://www.devoteam.com/">
 		<img src="images/devoteam_logo.png" alt="Devoteam Logo">
 	</a>
