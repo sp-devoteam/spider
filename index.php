@@ -333,15 +333,15 @@ To complete the assessment, please use the tabs and check the comment which bett
 ####  End of Logged on bit ######
 ?>
  
-	<br><br><br>
+	<br><br>
 	<table border = "0px">
 	<tr>
 		<td>
+			<p class = "center">
 			<a href="https://www.devoteam.com/">
-				<p class = "center">
-					<img src="images/devoteam_logo.png" alt="Devoteam Logo">
-				</p>
+				<img src="images/devoteam_logo.png" alt="Devoteam Logo">
 			</a>
+			</p>
 		</td>
 	</tr>
 	</table>
