@@ -334,7 +334,7 @@ To complete the assessment, please use the tabs and check the comment which bett
 ?>
  
 	<br><br>
-	<y class="center"><a href="https://www.devoteam.com/"><img src="images/devoteam_logo.png" alt="Devoteam Logo"></a></y>
+	<a href="https://www.devoteam.com/"><img src="images/devoteam_logo.png" alt="Devoteam Logo"></a>
 	<br>
 	<a href="https://www.devoteam.com/">
 		<img src="images/devoteam_logo.png" alt="Devoteam Logo">
