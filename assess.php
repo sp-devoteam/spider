@@ -150,10 +150,11 @@ input[type=submit] {
 				<?php if (isset($_SESSION['usr_id'])) { ?>
 				<li><p class="navbar-text">Signed in as <?php echo $_SESSION['usr_name']; ?></p></li>
 				<li><a href="logout.php">Log Out</a></li>
-				<li><a href="blog">Blog</a></li>
+				<li><a href="https://ready-to-innovate.com/blog/using-rti/using-ready-to-innovate-rti/">Blog</a></li>
 				<?php } else { ?>
 				<li><a href="login.php">Login</a></li>
 				<li><a href="register.php">Sign Up</a></li>
+				<li><a href="https://ready-to-innovate.com/blog/using-rti/using-ready-to-innovate-rti/">Blog</a></li>
 				<?php } ?>
 
 			</ul>
