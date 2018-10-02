@@ -334,7 +334,7 @@ To complete the assessment, please use the tabs and check the comment which bett
 ?>
  
 	<br><br><br>
-	<table border = "0px" width = "99%" height="800px">
+	<table border = "0px" width = "99%" height="820px">
 		<tr><td valign=bottom>
 			<p class="center">
 				<a href="https://www.devoteam.com/">
