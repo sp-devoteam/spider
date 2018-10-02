@@ -149,7 +149,7 @@ input[type=submit] {
 			<ul class="nav navbar-nav navbar-right">
 				<?php if (isset($_SESSION['usr_id'])) { ?>
 				<!-- <li><a class="navbar-text">Signed in as <?php echo $_SESSION['usr_name']; ?></a></li> -->
-				<li><a>Signed in as <?php echo $_SESSION['usr_name']; ?></a></li>
+				<li><a href="assess.php">Signed in as: <?php echo $_SESSION['usr_name']; ?></a></li>
 				<li><a href="logout.php">Log Out</a></li>
 				<li><a href="https://ready-to-innovate.com/blog/using-rti/using-ready-to-innovate-rti/">Blog</a></li>
 				<?php } else { ?>
