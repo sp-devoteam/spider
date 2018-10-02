@@ -118,7 +118,7 @@ h3 { color: #7c795d; font-family: 'Source Sans Pro', sans-serif; font-size: 28px
 		<div class="collapse navbar-collapse" id="navbar1">
 			<ul class="nav navbar-nav navbar-right">
 				<?php if (isset($_SESSION['usr_id'])) { ?>
-				<li><a>Signed in as: <?php echo $_SESSION['usr_name']; ?></a></li>
+				<li class="active"><a>Signed in as: <?php echo $_SESSION['usr_name']; ?></a></li>
 				<li><a href="logout.php">Log Out</a></li>
 				<li><a href="https://ready-to-innovate.com/blog/using-rti/using-ready-to-innovate-rti/">Blog</a></li>
 				<?php } else { ?>
