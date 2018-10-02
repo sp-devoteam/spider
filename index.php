@@ -334,7 +334,7 @@ To complete the assessment, please use the tabs and check the comment which bett
 ?>
  
 	<br><br>
-	<y class="center">Einfach nur Text!</y>
+	<y class="center" href="https://www.devoteam.com/">Einfach nur Text!</y>
 	<table border = "0px">
 	<tr>
 		<td>
