@@ -46,9 +46,9 @@ if (isset($_POST['signup'])) {
 		$cpassword_error = "Password and Confirm Password doesn't match";
 	}
 	if (!$error) {
-		$qq = "INSERT INTO users(name,email,password,uuid) VALUES('" . $name . "', '" . $email . "', '" . md5($password) . "',uuid())	";
-		print $qq . "<br>";
-#print $aa . "<br>";
+#		$qq = "INSERT INTO users(name,email,password,uuid) VALUES('" . $name . "', '" . $email . "', '" . md5($password) . "',uuid())	";
+#		print $qq . "<br>";
+#		print $aa . "<br>";
 #		if(mysql_query($db, $qq) {
 		if(mysqli_query($db, "INSERT INTO users(name,email,password) VALUES('" . $name . "', '" . $email . "', '" . md5($password) . "')")) {
 			$successmsg = "Successfully Registered! <a href='login.php'>Click here to Login</a>";
