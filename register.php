@@ -68,6 +68,10 @@ if (isset($_POST['signup'])) {
 	<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css" />
 </head>
 <body>
+	
+<style>
+      .center  { text-align: right; vertical-align: bottom; }
+</style>	
 
 <nav class="navbar navbar-default" role="navigation">
 	<div class="container-fluid">
@@ -140,6 +144,18 @@ if (isset($_POST['signup'])) {
 </div>
 <script src="js/jquery-1.10.2.js"></script>
 <script src="js/bootstrap.min.js"></script>
+	
+	<br><br><br>
+	<table border = "0px" width = "99%" height="420px">
+		<tr><td valign=bottom>
+			<p class="center">
+				<a href="https://www.devoteam.com/">
+					<img src="images/devoteam_logo.png" alt="Devoteam Logo">
+				</a>
+			</p>
+		</td></tr>
+</table>
+
 </body>
 </html>
 
