@@ -203,6 +203,15 @@ table {
     -webkit-border-radius: 0 0 6px 6px
     border-radius: 0 0 6px 6px
 }
+	
+#logo {
+  background-color: white;
+  position: absolute;
+  width: 193px;
+  height: 65px;
+  bottom: 20px;
+  right: 20px;
+}
   
 </style>
 
@@ -868,6 +877,10 @@ $i++;
 
 </div>
 <br>
+	
+<div id="logo">
+<a href="https://www.devoteam.com/"><img src="images/devoteam_logo.png" alt="Devoteam Logo"></a>
+</div>
 
 <!--
 <script>
