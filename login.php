@@ -57,6 +57,7 @@ connectDB();
 		<div class="collapse navbar-collapse" id="navbar1">
 			<ul class="nav navbar-nav navbar-right">
 				<li class="active"><a href="login.php">Login</a></li>
+				<li><a href="register.php">Sign Up</a></li>
 				<li><a href="https://ready-to-innovate.com/blog/using-rti/using-ready-to-innovate-rti/">Blog</a></li>
 
 			</ul>
