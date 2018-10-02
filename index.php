@@ -92,13 +92,16 @@ input {
 
 h3 { color: #7c795d; font-family: 'Source Sans Pro', sans-serif; font-size: 28px; font-weight: 400; line-height: 32px; margin: 0 0 24px; }
 
+#logo {
+  background-color: white;
+  position: absolute;
+  width: 193px;
+  height: 65px;
+  bottom: 20px;
+  right: 20px;
+}
 
-      .center  { text-align: right; vertical-align: bottom; }
-	  
-
-    </style>		
-    
-
+</style>		
     
     
 </head>
@@ -333,16 +336,10 @@ To complete the assessment, please use the tabs and check the comment which bett
 ####  End of Logged on bit ######
 ?>
  
-	<br><br><br>
-	<table border = "0px" width = "99%" height="820px">
-		<tr><td valign=bottom>
-			<p class="center">
-				<a href="https://www.devoteam.com/">
-					<img src="images/devoteam_logo.png" alt="Devoteam Logo">
-				</a>
-			</p>
-		</td></tr>
-	</table>
+<div id="logo">
+	<a href="https://www.devoteam.com/"><img src="images/devoteam_logo.png" alt="Devoteam Logo"></a>
+</div>
+
 </body>
 </html>
 
