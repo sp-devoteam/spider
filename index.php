@@ -93,7 +93,7 @@ input {
 h3 { color: #7c795d; font-family: 'Source Sans Pro', sans-serif; font-size: 28px; font-weight: 400; line-height: 32px; margin: 0 0 24px; }
 
 
-      .center  { text-align: center; }
+      .center  { text-align: center; color: orange; font-size:25px}
 	  
 
     </style>		
@@ -334,7 +334,7 @@ To complete the assessment, please use the tabs and check the comment which bett
 ?>
  
 	<br><br>
-	<y>Einfach nur Text!</y>
+	<y class="center">Einfach nur Text!</y>
 	<table border = "0px">
 	<tr>
 		<td>
