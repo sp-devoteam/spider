@@ -9,7 +9,7 @@ session_start();
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css" />
 	<link rel="stylesheet" type="text/css" href="css/datatables.min.css"/>
-	<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+	<!-- link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css" -->
 
 <!--	<script src="js/jquery-1.10.2.js"></script>-->
   	<link rel="stylesheet" href="/resources/demos/style.css">
