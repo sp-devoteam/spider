@@ -289,82 +289,84 @@ $userId = $_SESSION['usr_id'];
 </div>
 	
 <div id="tabs-3">
-
-<div class="widget">
-	<div class="row">
-		<div class="col-md-10 col-md-offset-1 well">
-			<fieldset>
-				<legend>Development</legend>
-				<div class="form-group">
-					<input class="w3-radio" type="radio" name="d1" id="radio-1" value="0" checked> <label>Ad-hoc tool selection</label><br>
-					<input class="w3-radio" type="radio" name="d1" id="radio-1" value="1"> <label>Manual deployment (App + OS)</label><br>
-					<input class="w3-radio" type="radio" name="d1" id="radio-1" value="2"> <label>CI/CD for non-production</label><br>
-					<input class="w3-radio" type="radio" name="d1" id="radio-1" value="3"> <label>CD Pipelines capable of pushing to production</label><br>
-					<input class="w3-radio" type="radio" name="d1" id="radio-1" value="4"> <label>> 90% of projects developed using agile development techniques</label><br>
-				</div>
-			</fieldset>
-			<fieldset>			
-   				<legend>Operations</legend>
-				<div class="form-group">
-					<input class="w3-radio" type="radio" name="o1" id="radio-1" value="0" checked> <label>Core build for OS only Basic (manual) provisioning</label><br>
-					<input class="w3-radio" type="radio" name="o1" id="radio-1" value="1"> <label>Patch & Release management (OS)</label><br>
-					<input class="w3-radio" type="radio" name="o1" id="radio-1" value="2"> <label>QA staging process SOE</label><br>
-					<input class="w3-radio" type="radio" name="o1" id="radio-1" value="3"> <label>Automated OS Builds</label><br>
-					<input class="w3-radio" type="radio" name="o1" id="radio-1" value="4"> <label>> 90% of infrastructure is automatically provisioned and managed</label><br>
-				</div>
-			</fieldset>				
+	<div class="widget">
+		<div class="row">
+			<div class="col-md-10 col-md-offset-1 well">
+				<fieldset>
+					<legend>Development</legend>
+					<div class="form-group">
+						<input class="w3-radio" type="radio" name="d1" id="radio-1" value="0" checked> <label>Ad-hoc tool selection</label><br>
+						<input class="w3-radio" type="radio" name="d1" id="radio-1" value="1"> <label>Manual deployment (app + OS)</label><br>
+						<input class="w3-radio" type="radio" name="d1" id="radio-1" value="2"> <label>CI/CD for non-production</label><br>
+						<input class="w3-radio" type="radio" name="d1" id="radio-1" value="3"> <label>CD pipelines capable of pushing to production</label><br>
+						<input class="w3-radio" type="radio" name="d1" id="radio-1" value="4"> <label>More then 90% of projects developed by using agile development techniques</label><br>
+					</div>
+				</fieldset>
+				<fieldset>			
+   					<legend>Operations</legend>
+					<div class="form-group">
+						<input class="w3-radio" type="radio" name="o1" id="radio-1" value="0" checked> <label>Core build for OS only basic (manual) provisioning</label><br>
+						<input class="w3-radio" type="radio" name="o1" id="radio-1" value="1"> <label>Patch & release management (OS)</label><br>
+						<input class="w3-radio" type="radio" name="o1" id="radio-1" value="2"> <label>QA staging process SOE</label><br>
+						<input class="w3-radio" type="radio" name="o1" id="radio-1" value="3"> <label>Automated OS builds</label><br>
+						<input class="w3-radio" type="radio" name="o1" id="radio-1" value="4"> <label>More then 90% of infrastructure is automatically provisioned and managed</label><br>
+					</div>
+				</fieldset>				
+			</div>	
 		</div>	
-	</div>	
-				
-<!-- 				
+	</div>   
+</div>
+	
+<div id="tabs-4">
+	<div class="widget">
+		<div class="row">
+			<div class="col-md-10 col-md-offset-1 well">
+				<fieldset>
+					<legend>Development</legend>					
+					<div class="form-group">					
+						<input class="w3-radio" type="radio" name="d2" id="radio-2" value="0" checked> <label>No defined methodology</label><br>
+						<input class="w3-radio" type="radio" name="d2" id="radio-2" value="1"> <label>Defined waterfall approach</label><br>
+						<input class="w3-radio" type="radio" name="d2" id="radio-2" value="2"> <label>Limited agile development on new projects (not including operations)</label><br>
+						<input class="w3-radio" type="radio" name="d2" id="radio-2" value="3"> <label>Agile development through to production & ops</label><br>
+						<input class="w3-radio" type="radio" name="d2" id="radio-2" value="4"> <label>Full DevOps culture</label><br>
+					</div>
+				</fieldset>
+				<fieldset>			
+   					<legend>Operations</legend>
+					<div class="form-group">
+						<input class="w3-radio" type="radio" name="o2" id="radio-2" value="0" checked> <label>Hosting/Mgmt Only</label><br>
+						<input class="w3-radio" type="radio" name="o2" id="radio-2" value="1"> <label>Defined SLAs + ITIL</label><br>
+						<input class="w3-radio" type="radio" name="o2" id="radio-2" value="2"> <label>Compliance & Security Auditing</label><br>
+						<input class="w3-radio" type="radio" name="o2" id="radio-2" value="3"> <label>SOE</label><br>
+						<input class="w3-radio" type="radio" name="o2" id="radio-2" value="4"> <label>Full DevOps culture</label><br>						
+					</div>
+				</fieldset>
+			</div>	
+		</div>	
+	</div>  
+<!--						
 <fieldset>
 <legend>Development</legend>
-<input class="w3-radio" type="radio" name="d1" id="radio-1" value="0" checked> <label>Ad-hoc tool selection</label><br>
-<input class="w3-radio" type="radio" name="d1" id="radio-1" value="1"> <label>Manual deployment (App + OS)</label><br>
-<input class="w3-radio" type="radio" name="d1" id="radio-1" value="2"> <label>CI/CD for non-production</label><br>
-<input class="w3-radio" type="radio" name="d1" id="radio-1" value="3"> <label>CD Pipelines capable of pushing to production</label><br>
-<input class="w3-radio" type="radio" name="d1" id="radio-1" value="4"> <label>> 90% of projects developed using agile development techniques</label><br>
-
-  </fieldset>
- 
-  <fieldset>
-    <legend>Operations</legend>
-<input class="w3-radio" type="radio" name="o1" id="radio-1" value="0" checked> <label>Core build for OS only Basic (manual) provisioning</label><br>
-<input class="w3-radio" type="radio" name="o1" id="radio-1" value="1"> <label>Patch & Release management (OS)</label><br>
-<input class="w3-radio" type="radio" name="o1" id="radio-1" value="2"> <label>QA staging process SOE</label><br>
-<input class="w3-radio" type="radio" name="o1" id="radio-1" value="3"> <label>Automated OS Builds</label><br>
-<input class="w3-radio" type="radio" name="o1" id="radio-1" value="4"> <label>> 90% of infrastructure is automatically provisioned and managed</label><br>
-  </fieldset> 
- 
---> 
-
-</div>   
-
-	
-	
-  </div>
-  <div id="tabs-4">
-  <fieldset>
-    <legend>Development</legend>
 <input class="w3-radio" type="radio" name="d2" id="radio-2" value="0" checked> <label>No defined methodology</label><br>
 <input class="w3-radio" type="radio" name="d2" id="radio-2" value="1"> <label>Defined waterfall approach</label><br>
 <input class="w3-radio" type="radio" name="d2" id="radio-2" value="2"> <label>Limited agile development on new projects (not including operations)</label><br>
 <input class="w3-radio" type="radio" name="d2" id="radio-2" value="3"> <label>Agile development through to production & ops</label><br>
 <input class="w3-radio" type="radio" name="d2" id="radio-2" value="4"> <label>Full DevOps culture</label><br>
 
-  </fieldset>
+</fieldset>
  
-  <fieldset>
-    <legend>Operations</legend>
+<fieldset>
+<legend>Operations</legend>
 <input class="w3-radio" type="radio" name="o2" id="radio-2" value="0" checked> <label>Hosting/Mgmt Only</label><br>
 <input class="w3-radio" type="radio" name="o2" id="radio-2" value="1"> <label>Defined SLAs + ITIL</label><br>
 <input class="w3-radio" type="radio" name="o2" id="radio-2" value="2"> <label>Compliance & Security Auditing</label><br>
 <input class="w3-radio" type="radio" name="o2" id="radio-2" value="3"> <label>SOE</label><br>
 <input class="w3-radio" type="radio" name="o2" id="radio-2" value="4"> <label>Full DevOps culture</label><br>
-  </fieldset> 
+</fieldset> 
+-->					
+</div>
 
-  </div>
-  <div id="tabs-5">
+<div id="tabs-5">
   <fieldset>
     <legend>Development</legend>
 <input class="w3-radio" type="radio" name="d3" id="radio-3" value="0" checked> <label>Ad-hoc choice of application dev tools. Very limited understand of new architectures and approaches to application deployment</label><br>
