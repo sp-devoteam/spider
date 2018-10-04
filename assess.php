@@ -208,7 +208,7 @@ $userId = $_SESSION['usr_id'];
     <li><a href="#tabs-5">Architecture</a></li>
     <li><a href="#tabs-6">Strategy</a></li>
     <li><a href="#tabs-7">Resources</a></li>
-    <li><input type="submit" value="Submit"></li>
+    <li><input class="btn btn-primary" type="submit" value="Submit"></li>
   </ul>
 
 <div id="tabs-1">
