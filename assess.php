@@ -352,7 +352,7 @@ $userId = $_SESSION['usr_id'];
 				<fieldset>
 					<legend>Development</legend>
 					<div class="form-group">
-						<table><tr><td width = "20px">
+						<table border="1"><tr><td width = "20px">
 							<input class="w3-radio" type="radio" name="d3" id="radio-3" value="0" checked></td><td><label>Ad-hoc choice of application dev tools. Very limited understand of new architectures and approaches to application deployment</label><br>
 						</td></tr></table>
 						<input class="w3-radio" type="radio" name="d3" id="radio-3" value="1"> <label>Selected vendor tech roadmap. Initial understanding of new architectures and designs</label><br>
