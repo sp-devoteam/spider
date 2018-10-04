@@ -117,25 +117,25 @@ h3 { color: #7c795d; font-family: 'Source Sans Pro', sans-serif; font-size: 20px
 input[type=submit] {
     padding:0px 10px;
     width: 135px;
- height: 205x;
+    height: 205x;
     font-size:20px; 
-    background:#EE6363; 
+    background:#F7485E; 
     border:0 none;
     cursor:pointer;
     -webkit-border-radius: 5px;
-    border-radius: 5px; 
+    border-radius: 7px; 
 }
 	  
 #logo {
-  background-color: white;
-  position: absolute;
-  width: 193px;
-  height: 65px;
-  bottom: 20px;
-  right: 20px;
-}
+	background-color: white;
+	position: absolute;
+	width: 193px;
+	height: 65px;
+	bottom: 20px;
+	right: 20px;
+	}
 
-    </style>		
+</style>		
     
 
     
