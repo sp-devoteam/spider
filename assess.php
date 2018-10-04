@@ -352,12 +352,14 @@ $userId = $_SESSION['usr_id'];
 				<fieldset>
 					<legend>Development</legend>
 					<div class="form-group">
-						<table border="1"><tr><td width = "15px" valign="top">
+						<table border="0"><tr><td width = "16px" valign="top">
 							<input class="w3-radio" type="radio" name="d3" id="radio-3" value="0" checked></td><td><label>Ad-hoc choice of application dev tools. Very limited understand of new architectures and approaches to application deployment</label><br>
 						</td></tr></table>
 						<input class="w3-radio" type="radio" name="d3" id="radio-3" value="1"> <label>Selected vendor tech roadmap. Initial understanding of new architectures and designs</label><br>
 						<input class="w3-radio" type="radio" name="d3" id="radio-3" value="2"> <label>Iterative development of existing applications Limited legacy strategy and beginnings of new development architectures</label><br>
-						<input class="w3-radio" type="radio" name="d3" id="radio-3" value="3"> <label>Focus on new platforms & limited legacy platforms. Well defined architecture for new development projects and operating models</label><br>
+						<table border="0"><tr><td width = "16px" valign="top">
+							<input class="w3-radio" type="radio" name="d3" id="radio-3" value="3"> <label>Focus on new platforms & limited legacy platforms. Well defined architecture for new development projects and operating models</label><br>
+						</td></tr></table>
 						<input class="w3-radio" type="radio" name="d3" id="radio-3" value="4"> <label>Holistic & defined overall development strategy. Good designs and architectures in place and under regular review</label><br>
 					</div>
 				</fieldset>
