@@ -49,55 +49,67 @@ function validateForm() {
   } );
   </script>
   
-  <style>
-      #locationField, #controls {
+<style>
+
+#locationField, #controls {
         position: relative;
         width: 480px;
-      }
-      #autocomplete {
+	}
+
+#autocomplete {
         position: absolute;
         top: 0px;
         left: 0px;
         width: 99%;
-      }
-      .label {
+	}
+
+.label {
         text-align: right;
         font-weight: bold;
-
         color: #303030;
-      }
-      #address {
+      	}
+	  
+#address {
         border: 1px solid #000090;
         background-color: #f0f0ff;
         width: 480px;
         padding-right: 2px;
-      }
-      #address td {
+      	}
+	  
+#address td {
         font-size: 10pt;
-      }
-      .field {
+      	}
+	  
+.field {
         width: 99%;
-      }
-      .slimField {
+      	}
+	  
+.slimField {
         width: 80px;
-      }
-      .wideField {
+      	}
+	  
+.wideField {
         width: 200px;
-      }
-      #locationField {
+      	}
+	  
+#locationField {
         height: 20px;
         margin-bottom: 2px;
-      }
-      .page { position: absolute; 
+      	}
+
+.page {
+	position: absolute; 
       	top: 10; 
       	left: 100; 
       	visibility: hidden; 
       	} 
 
-
-p { font-family: 'Inder', sans-serif; line-height: 28px; margin-bottom: 15px; color: #666; }
-
-
+p {
+	font-family: 'Inder', sans-serif;
+	line-height: 28px;
+	margin-bottom:
+	15px;color: #666;
+	}
 
 input {
   	border-radius: 15px;
@@ -142,8 +154,6 @@ input[type=submit] {
 	}
 
 </style>		
-    
-
     
     
 </head>
@@ -226,20 +236,6 @@ $userId = $_SESSION['usr_id'];
 			</fieldset>
 		</div>
 	</div>
-				
-<!-- 				
-<b>AIM</b>: To understand the wider issues around PaaS / DevOps adoption; what will make it successful or why has it stalled.  In parallel with technical PoCs or pilots.
-</p>
-
-<p>
-<b>AIM</b>: To understand the maturity of your organisation across 5 outlined areas of interest
-</p>
-
-<p><b>AIM</b>: To identify next steps, using follow-up sessions from Red Hat Consulting to do in depth studies</p>
-<br>
-<p>To complete the assessment, please use the tabs and check the comment which better suits your environment.  Once complete, click "Submit" from the Submit Tab.</p>
--->  
-
 </div>
 
 <div id="tabs-2">
@@ -294,9 +290,35 @@ $userId = $_SESSION['usr_id'];
 	
 <div id="tabs-3">
 
-<div class="widget"> 
-  <fieldset>
-    <legend>Development</legend>
+<div class="widget">
+	<div class="row">
+		<div class="col-md-10 col-md-offset-1 well">
+			<fieldset>
+				<legend>Development</legend>
+				<div class="form-group">
+					<input class="w3-radio" type="radio" name="d1" id="radio-1" value="0" checked> <label>Ad-hoc tool selection</label><br>
+					<input class="w3-radio" type="radio" name="d1" id="radio-1" value="1"> <label>Manual deployment (App + OS)</label><br>
+					<input class="w3-radio" type="radio" name="d1" id="radio-1" value="2"> <label>CI/CD for non-production</label><br>
+					<input class="w3-radio" type="radio" name="d1" id="radio-1" value="3"> <label>CD Pipelines capable of pushing to production</label><br>
+					<input class="w3-radio" type="radio" name="d1" id="radio-1" value="4"> <label>> 90% of projects developed using agile development techniques</label><br>
+				</div>
+			</fieldset>
+			<fieldset>			
+   				<legend>Operations</legend>
+				<div class="form-group">
+					<input class="w3-radio" type="radio" name="o1" id="radio-1" value="0" checked> <label>Core build for OS only Basic (manual) provisioning</label><br>
+					<input class="w3-radio" type="radio" name="o1" id="radio-1" value="1"> <label>Patch & Release management (OS)</label><br>
+					<input class="w3-radio" type="radio" name="o1" id="radio-1" value="2"> <label>QA staging process SOE</label><br>
+					<input class="w3-radio" type="radio" name="o1" id="radio-1" value="3"> <label>Automated OS Builds</label><br>
+					<input class="w3-radio" type="radio" name="o1" id="radio-1" value="4"> <label>> 90% of infrastructure is automatically provisioned and managed</label><br>
+				</div>
+			</fieldset>				
+		</div>	
+	</div>	
+				
+<!-- 				
+<fieldset>
+<legend>Development</legend>
 <input class="w3-radio" type="radio" name="d1" id="radio-1" value="0" checked> <label>Ad-hoc tool selection</label><br>
 <input class="w3-radio" type="radio" name="d1" id="radio-1" value="1"> <label>Manual deployment (App + OS)</label><br>
 <input class="w3-radio" type="radio" name="d1" id="radio-1" value="2"> <label>CI/CD for non-production</label><br>
@@ -314,8 +336,12 @@ $userId = $_SESSION['usr_id'];
 <input class="w3-radio" type="radio" name="o1" id="radio-1" value="4"> <label>> 90% of infrastructure is automatically provisioned and managed</label><br>
   </fieldset> 
  
-</div>    
-    </p>
+--> 
+
+</div>   
+
+	
+	
   </div>
   <div id="tabs-4">
   <fieldset>
