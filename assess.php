@@ -100,31 +100,37 @@ p { font-family: 'Inder', sans-serif; line-height: 28px; margin-bottom: 15px; co
 
 
 input {
-  border-radius: 15px;
-  margin: 10px;
-} 	
+  	border-radius: 15px;
+	margin: 10px;
+	} 	
 
-    fieldset {
-      border: 0;
-    }
+fieldset {
+      	border: 0;
+    	}
 
-    .overflow {
-      height: 200px;
-    }
+.overflow {
+	height: 200px;
+    	}
 
-h3 { color: #7c795d; font-family: 'Source Sans Pro', sans-serif; font-size: 20px; font-weight: 400; line-height: 32px; margin: 0 0 14px; }
+h3 {
+	color: #7c795d;
+	font-family: 'Source Sans Pro', sans-serif;
+	font-size: 20px;
+	font-weight: 400;
+	line-height: 32px;
+	margin: 0 0 14px;
+	}
 
 input[type=submit] {
 	padding:0px 10px;
 	width: 135px;
-	height: 205x;
+	height: 25x;
 	font-size:20px; 
 	background:#F7485E; 
 	border:0 none;
 	cursor:pointer;
-	-webkit-border-radius: 5px;
 	border-radius: 7px; 
-}
+	}
 	  
 #logo {
 	background-color: white;
