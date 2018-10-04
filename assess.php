@@ -215,23 +215,22 @@ $userId = $_SESSION['usr_id'];
 
 <div class="row">
 	<div class="col-md-4 col-md-offset-4 well">
-		<form role="form" action="/login.php" method="post" name="loginform">
+<!--		<form role="form" action="/login.php" method="post" name="loginform"> -->
 			<fieldset>
-				<legend>Login</legend>
+				<legend>Details</legend>
 				
 				<div class="form-group">
-					<label for="name">Username</label>
-					<input type="text" name="email" placeholder="Your Username" required class="form-control" />
+					<label for="name">Client Name</label>
+					<input type="text" name="email" placeholder="Your Client Name" required class="form-control" />
+					<label class="w3-label w3-validate">Client Name</label>
+					<input class="w3-input" name="customerName" placeholder="Your Client Name" type="text" required>
 				</div>
 			</fieldset>
-		</form>
+	<!-- 	</form> -->
 	</div>
 </div>
 		
-<label class="w3-label w3-validate">Client Name</label>
-<input class="w3-input" name="customerName" placeholder="Your Client Name" type="text" required>
-
-    <br>
+<br>
 <label class="w3-label w3-validate" >Red Hat Email Address</label>    
 <input onfocusout="validateForm()" class="w3-input" name="rhEmail" placeholder="Your Email-Address" type="text" required>
     <br>
