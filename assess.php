@@ -201,10 +201,33 @@ $userId = $_SESSION['usr_id'];
     <li><a href="#tabs-7">Resources</a></li>
     <li><input type="submit" value="Submit"></li>
   </ul>
-  <div id="tabs-1">
-  <h3>Welcome to the "Ready to Innovate?" Assessment.</h3>
-  
-    <p>
+
+<div id="tabs-1">
+	<div class="row">
+		<div class="col-md-4 col-md-offset-4 well">
+			<fieldset>
+				<legend>Welcome to the "Ready to Innovate?" assessment!</legend>
+
+ 				<div class="form-group">
+					<label for="name">Aim:</label>
+					<p>To understand the wider issues around PaaS / DevOps adoption; what will make it successful or why has it stalled.  In parallel with technical PoCs or pilots.</p>
+				</div>
+ 				<div class="form-group">
+					<label for="name">Aim:</label>
+					<p>To understand the maturity of your organisation across 5 outlined areas of interest.</p>
+				</div>				
+ 				<div class="form-group">
+					<label for="name">Aim:</label>
+					<p>To identify next steps, using follow-up sessions from Red Hat Consulting to do in depth studies.</p>
+				</div>					
+ 				<div class="form-group">
+					<p>To complete the assessment, please use the tabs and check the comment which better suits your environment. Once complete, click "Submit" from the Submit Tab.</p>
+				</div>
+			</fieldset>
+		</div>
+	</div>
+				
+<!-- 				
 <b>AIM</b>: To understand the wider issues around PaaS / DevOps adoption; what will make it successful or why has it stalled.  In parallel with technical PoCs or pilots.
 </p>
 
@@ -215,10 +238,11 @@ $userId = $_SESSION['usr_id'];
 <p><b>AIM</b>: To identify next steps, using follow-up sessions from Red Hat Consulting to do in depth studies</p>
 <br>
 <p>To complete the assessment, please use the tabs and check the comment which better suits your environment.  Once complete, click "Submit" from the Submit Tab.</p>
-  </div>
+-->  
+
+</div>
 
 <div id="tabs-2">
-
 	<div class="row">
 		<div class="col-md-4 col-md-offset-4 well">
 			<fieldset>
