@@ -231,9 +231,6 @@ $userId = $_SESSION['usr_id'];
 </div>
 		
 <br>
-<label class="w3-label w3-validate" >Red Hat Email Address</label>    
-<input onfocusout="validateForm()" class="w3-input" name="rhEmail" placeholder="Your Email-Address" type="text" required>
-    <br>
 
   <fieldset>
     <label for="region">Red Hat Region</label>
