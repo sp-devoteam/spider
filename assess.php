@@ -221,8 +221,10 @@ $userId = $_SESSION['usr_id'];
 			<div class="form-group">
 				<label for="name">Client Name</label>
 				<input type="text" name="customerName" placeholder="Your Client Name" required class="form-control" />
+			</div>
+			<div class="form-group">
 				<label for="name">Red Hat Email Address</label>
-				<input type="text" name="rhEmail" placeholder="Your Email-Address" required class="form-control" />
+				<input onfocusout="validateForm()" type="text" name="rhEmail" placeholder="Your Email-Address" required class="form-control" />
 			</div>
 		</fieldset>
 	</div>
