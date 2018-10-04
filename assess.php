@@ -179,10 +179,9 @@ $userId = $_SESSION['usr_id'];
 
 ?>
 
-    <div class="container">
+<div class="container">
 
-      <!-- Main component for a primary marketing message or call to action -->
-<!--      <div class="jumbotron"> -->
+
 <form name="myForm" id="innovate-form" action="tmp.php"  class="w3-container">
 
 <div id="tabs">
@@ -211,8 +210,24 @@ $userId = $_SESSION['usr_id'];
 <br>
 <p>To complete the assessment, please use the tabs and check the comment which better suits your environment.  Once complete, click "Submit" from the Submit Tab.</p>
   </div>
-  <div id="tabs-2">
-    
+
+<div id="tabs-2">
+
+<div class="row">
+	<div class="col-md-4 col-md-offset-4 well">
+		<form role="form" action="/login.php" method="post" name="loginform">
+			<fieldset>
+				<legend>Login</legend>
+				
+				<div class="form-group">
+					<label for="name">Username</label>
+					<input type="text" name="email" placeholder="Your Username" required class="form-control" />
+				</div>
+			</fieldset>
+		</form>
+	</div>
+</div>
+		
 <label class="w3-label w3-validate">Client Name</label>
 <input class="w3-input" name="customerName" placeholder="Your Client Name" type="text" required>
 
