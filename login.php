@@ -43,14 +43,14 @@ connectDB();
 
 <style>
 
-#logo {
-  background-color: white;
-  position: absolute;
-  width: 193px;
-  height: 65px;
-  bottom: 20px;
-  right: 20px;
-}
+	#logo {
+		background-color: white;
+		position: absolute;
+		width: 193px;
+ 		height: 65px;
+ 		bottom: 20px;
+ 		right: 20px;
+		}
 	
 </style>	
 
