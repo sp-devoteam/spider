@@ -115,15 +115,15 @@ input {
 h3 { color: #7c795d; font-family: 'Source Sans Pro', sans-serif; font-size: 20px; font-weight: 400; line-height: 32px; margin: 0 0 14px; }
 
 input[type=submit] {
-    padding:0px 10px;
-    width: 135px;
-    height: 205x;
-    font-size:20px; 
-    background:#F7485E; 
-    border:0 none;
-    cursor:pointer;
-    -webkit-border-radius: 5px;
-    border-radius: 7px; 
+	padding:0px 10px;
+	width: 135px;
+	height: 205x;
+	font-size:20px; 
+	background:#F7485E; 
+	border:0 none;
+	cursor:pointer;
+	-webkit-border-radius: 5px;
+	border-radius: 7px; 
 }
 	  
 #logo {
