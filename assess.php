@@ -430,6 +430,7 @@ $userId = $_SESSION['usr_id'];
 			</div>	
 		</div>	
 	</div>  
+</div>
 </div> <!-- /container -->
 
 <?php    }
