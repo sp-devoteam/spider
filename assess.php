@@ -204,7 +204,7 @@ $userId = $_SESSION['usr_id'];
 
 <div id="tabs-1">
 	<div class="row">
-		<div class="col-md-4 col-md-offset-4 well" width="90%">
+		<div class="col-md-10 col-md-offset-4 well">
 			<fieldset>
 				<legend>Welcome to the "Ready to Innovate?" assessment!</legend>
 
