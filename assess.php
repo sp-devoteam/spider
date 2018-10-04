@@ -358,7 +358,7 @@ $userId = $_SESSION['usr_id'];
 						<input class="w3-radio" type="radio" name="d3" id="radio-3" value="1"> <label>Selected vendor tech roadmap. Initial understanding of new architectures and designs</label><br>
 						<input class="w3-radio" type="radio" name="d3" id="radio-3" value="2"> <label>Iterative development of existing applications Limited legacy strategy and beginnings of new development architectures</label><br>
 						<table border="0"><tr><td width = "16px" valign="top">
-							<input class="w3-radio" type="radio" name="d3" id="radio-3" value="3"> <label>Focus on new platforms & limited legacy platforms. Well defined architecture for new development projects and operating models</label><br>
+							<input class="w3-radio" type="radio" name="d3" id="radio-3" value="3"></td><td><label>Focus on new platforms & limited legacy platforms. Well defined architecture for new development projects and operating models</label><br>
 						</td></tr></table>
 						<input class="w3-radio" type="radio" name="d3" id="radio-3" value="4"> <label>Holistic & defined overall development strategy. Good designs and architectures in place and under regular review</label><br>
 					</div>
