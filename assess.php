@@ -244,9 +244,6 @@ $userId = $_SESSION['usr_id'];
 			</fieldset>
 		</div>
 	</div>
-</div>		
-<br>
-   
 
 <!--
 <label  class="w3-label w3-validate">Domain</label>
@@ -263,7 +260,7 @@ $userId = $_SESSION['usr_id'];
   </p>
 -->    
     
-  </div>
+</div>
 	
 <div id="tabs-3">
 
