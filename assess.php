@@ -213,45 +213,41 @@ $userId = $_SESSION['usr_id'];
 
 <div id="tabs-2">
 
-<div class="row">
-	<div class="col-md-4 col-md-offset-4 well">
-		<fieldset>
-			<legend>Details</legend>
+	<div class="row">
+		<div class="col-md-4 col-md-offset-4 well">
+			<fieldset>
+				<legend>Details</legend>
 			
-			<div class="form-group">
-				<label for="name">Client Name</label>
-				<input type="text" name="customerName" placeholder="Your Client Name" required class="form-control" />
-			</div>
-			<div class="form-group">
-				<label for="name">Red Hat Email Address</label>
-				<input onfocusout="validateForm()" type="text" name="rhEmail" placeholder="Your Email-Address" required class="form-control" />
-			</div>
-		</fieldset>
+				<div class="form-group">
+					<label for="name">Client Name</label>
+					<input type="text" name="customerName" placeholder="Your Client Name" required class="form-control" />
+				</div>
+				<div class="form-group">
+					<label for="name">Red Hat Email Address</label>
+					<input onfocusout="validateForm()" type="text" name="rhEmail" placeholder="Your Email-Address" required class="form-control" />
+				</div>
+				<div class="form-group">
+					<label for="region">Red Hat Region</label>
+					<select name="region" id="region">
+						<option value=DE>DE</option>
+						<option value=CH>CH</option>
+						<option value=Benelux>Benelux</option>
+						<option value=UK>UK</option>
+						<option value=Nordics>Nordics</option>
+						<option value=France>France</option>
+						<option value=Italy>Italy</option>
+						<option value=Iberia>Iberia</option>
+						<option value=Turkey>Turkey</option>
+						<option value=other>other</option>
+					</select>
+				</div>			
+			</fieldset>
+		</div>
 	</div>
-</div>
-		
+</div>		
 <br>
+   
 
-  <fieldset>
-    <label for="region">Red Hat Region</label>
-    <select name="region" id="region">
-<option value=DA>DA</option>
-<option value=CH>CH</option>
-<option value=Benelux>Benelux</option>
-<option value=UKI>UKI</option>
-<option value=Nordics>Nordics</option>
-<option value=CEE>CEE</option>
-<option value=CIS>CIS</option>
-<option value=France>France</option>
-<option value=ICG>ICG</option>
-<option value=Italy>Italy</option>
-<option value=Iberia>Iberia</option>
-<option value=MENA>MENA</option>
-<option value=Turkey>Turkey</option>
-    </select>
-    </fieldset>
-    
-  </p>
 <!--
 <label  class="w3-label w3-validate">Domain</label>
 <select name="domain">
@@ -268,7 +264,8 @@ $userId = $_SESSION['usr_id'];
 -->    
     
   </div>
-  <div id="tabs-3">
+	
+<div id="tabs-3">
 
 <div class="widget"> 
   <fieldset>
