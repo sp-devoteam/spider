@@ -14,7 +14,7 @@
 
 body {
 
-    margin: 2px auto;
+    margin: 0px auto;
     font-family: 'trebuchet MS', 'Lucida sans', Arial;
     font-size: 14px;
     color: #444;
