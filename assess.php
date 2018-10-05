@@ -114,7 +114,6 @@ p {
 input {
   	border-radius: 15px;
 	margin: 10px;
-	width: 2540px;
 	} 	
 
 fieldset {
@@ -240,7 +239,7 @@ $userId = $_SESSION['usr_id'];
 			
 				<div class="form-group">
 					<label for="name">Client Name</label>
-					<input type="text" name="customerName" placeholder="Your Client Name" required class="form-control" />
+					<input type="text" name="customerName" placeholder="Your Client Name" required width="250px" class="form-control" />
 				</div>
 				<div class="form-group">
 					<label for="name">Red Hat Email Address</label>
