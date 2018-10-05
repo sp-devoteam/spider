@@ -6,6 +6,10 @@
     <script src="raphael-2.1.4.min.js"></script>
     <script src="justgage.js"></script>
     <title>Ready to Innovate Assessment</title>
+	
+	<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css" />
+	<link rel="stylesheet" type="text/css" href="css/datatables.min.css"/>	
+
 <style>
 
 body {
@@ -297,12 +301,6 @@ table {
 	<div class="container-fluid">
 		<!-- add header -->
 		<div class="navbar-header">
-			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar1">
-				<span class="sr-only">Toggle navigation</span>
-				<span class="icon-bar"></span>
-				<span class="icon-bar"></span>
-				<span class="icon-bar"></span>
-			</button>
 			<a class="navbar-brand" href="index.php"><img src="images/innovate.png">  Ready to Innovate?</a>
 		</div>
 		<!-- menu items -->
