@@ -299,22 +299,27 @@ table {
 	
 <nav class="navbar navbar-default" role="navigation">
 	<div class="container-fluid">
-		<!-- add header -->
 		<div class="navbar-header">
 			<a class="navbar-brand" href="index.php"><img src="images/innovate.png">  Ready to Innovate?</a>
 		</div>
-		<!-- menu items -->
 		<div class="collapse navbar-collapse" id="navbar1">
 			<ul class="nav navbar-nav navbar-right">
-				<li class="active"><a href="login.php">Login</a></li>
+				<?php if (isset($_SESSION['usr_id'])) { ?>
+				<li class="active"><a href="assess.php">Signed in as: <?php echo $_SESSION['usr_name']; ?></a></li>
+				<li><a href="logout.php">Log Out</a></li>
+				<li><a href="https://ready-to-innovate.com/blog/using-rti/using-ready-to-innovate-rti/">Blog</a></li>
+				<?php } else { ?>
+				<li><a href="login.php">Login</a></li>
 				<li><a href="register.php">Sign Up</a></li>
 				<li><a href="https://ready-to-innovate.com/blog/using-rti/using-ready-to-innovate-rti/">Blog</a></li>
-
+				<?php } ?>
 			</ul>
 		</div>
 	</div>
 </nav>
-      <div id="wrapper">
+
+
+	<div id="wrapper">
 
       <header>
 
