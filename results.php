@@ -820,7 +820,7 @@ $i++;
 <button id="analysis-opener">Open Analysis Dialog</button>
 	
 <div class="form-group">
-	<input type="analysis-opener" name="analysis-opener" value="Open Analysis Dialog" class="btn btn-primary" id="analysis-opener"/>
+	<input type="button" name="analysis-opener" value="Open Analysis Dialog" class="btn btn-primary" id="analysis-opener"/>
 </div>
 	
 <div id="priorities-dialog" title="Priority Areas">
