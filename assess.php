@@ -135,13 +135,14 @@ h3 {
 
 input[type=submit] {
 	padding:0px 10px;
-	width: 135px;
+	width: 120px;
 	height: 25x;
 	font-size:20px; 
 	background:#F7485E; 
 	border:0 none;
 	cursor:pointer;
-	border-radius: 7px; 
+	border-radius: 7px;
+	align-items: center;
 	}
 	  
 #logo {
