@@ -818,6 +818,10 @@ $i++;
 <br></div>
 <br> 
 <button id="analysis-opener">Open Analysis Dialog</button>
+	
+<div class="form-group">
+	<input type="submit" name="analysis-opener" value="Open Analysis Dialog" class="btn btn-primary" />
+</div>
 
 <div id="priorities-dialog" title="Priority Areas">
     <table class="bordered">
