@@ -237,9 +237,9 @@ $userId = $_SESSION['usr_id'];
 			<fieldset>
 				<legend>Details</legend>
 			
-				<div class="form-group">
+				<div class="form-group" width="250px">
 					<label for="name">Client Name</label>
-					<input type="text" name="customerName" placeholder="Your Client Name" required width="250px" class="form-control" />
+					<input type="text" name="customerName" placeholder="Your Client Name" required class="form-control" />
 				</div>
 				<div class="form-group">
 					<label for="name">Red Hat Email Address</label>
