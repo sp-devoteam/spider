@@ -237,7 +237,7 @@ $userId = $_SESSION['usr_id'];
 			<fieldset>
 				<legend>Details</legend>
 			
-				<div class="form-group" width="250px">
+				<div class="form-group">
 					<label for="name">Client Name</label>
 					<input type="text" name="customerName" placeholder="Your Client Name" required class="form-control" />
 				</div>
