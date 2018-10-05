@@ -114,6 +114,7 @@ p {
 input {
   	border-radius: 15px;
 	margin: 10px;
+	width: 2540px;
 	} 	
 
 fieldset {
