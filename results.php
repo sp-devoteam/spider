@@ -90,6 +90,7 @@ table {
 
 .bordered th {
     background-color: #dce9f9;
+    background-color: #f7485e;
     background-image: -webkit-gradient(linear, left top, left bottom, from(#ebf3fc), to(#dce9f9));
     background-image: -webkit-linear-gradient(top, #ebf3fc, #dce9f9);
     background-image:    -moz-linear-gradient(top, #ebf3fc, #dce9f9);
